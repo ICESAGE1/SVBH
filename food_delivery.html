@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food & Grocery Order</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>QuickBite</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#food">Food</a></li>
+                <li><a href="#drinks">Drinks</a></li>
+                <li><a href="#groceries">Groceries</a></li>
+                <li><a href="#cart">Cart</a></li>
+            </ul>
+            <button class="login-btn">Login</button>
+        </nav>
+    </header>
+
+    <section id="banner">
+        <h2>Delicious Food & Groceries Delivered to Your Doorstep</h2>
+        <p>Order from your favorite restaurants or shop for groceries with ease.</p>
+        <button class="order-now-btn">Order Now</button>
+    </section>
+
+    <section id="order-input">
+        <h2>Place Your Order</h2>
+        <div class="input-container">
+            <input type="text" id="item-name" placeholder="What would you like to order?" />
+            <input type="number" id="item-quantity" placeholder="Quantity" min="1" value="1" />
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be added here -->
+        </ul>
+        <p id="total">Total: ₹0</p>
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 QuickBite. All rights reserved.</p>
+    </footer>
+
+    <script src="/scripts.js"></script>
+</body>
+</html>
+
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #ff5722;
+    padding: 15px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+}
+
+header .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+header .nav-links li {
+    margin: 0 15px;
+}
+
+header .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header .login-btn {
+    background-color: #fff;
+    color: #ff5722;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+header .login-btn:hover {
+    background-color: #ffc107;
+}
+
+#banner {
+    text-align: center;
+    background: url('banner.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 20px;
+}
+
+#banner h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#banner p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.order-now-btn {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.order-now-btn:hover {
+    background-color: #e64a19;
+}
+
+#order-input {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#order-input h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-container input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.input-container button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.input-container button:hover {
+    background-color: #e64a19;
+}
+
+#cart {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+#cart h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#cart-items li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#total {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.checkout-btn {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.checkout-btn:hover {
+    background-color: #e64a19;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+</style>
+
+
+
+
