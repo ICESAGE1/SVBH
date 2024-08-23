@@ -40,5 +40,21 @@ function Cart() {
                 <div>
                   <span>{item.name}</span>
                   <span>{item.quantity} x ${item.price}</span>
-                  <button onClick={() => handleRemoveItem(item
+                  <button onClick={() => handleRemoveItem(item.id)}>Remove</button>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <h3>Total: ${totalAmount.toFixed(2)}</h3>
+          <Link to="/checkout">
+            <button>Proceed to Checkout</button>
+          </Link>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default Cart;
+
 
