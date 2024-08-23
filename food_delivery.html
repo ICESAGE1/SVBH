@@ -33,7 +33,7 @@
         <div class="input-container">
             <input type="text" id="item-name" placeholder="What would you like to order?" />
             <input type="number" id="item-quantity" placeholder="Quantity" min="1" value="1" />
-            <button onclick="addToCart()">Add to Cart</button>
+            <button id="add-to-cart-btn">Add to Cart</button>
         </div>
     </section>
 
@@ -43,7 +43,7 @@
             <!-- Cart items will be added here -->
         </ul>
         <p id="total">Total: ₹0</p>
-        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        <button id="checkout-btn" class="checkout-btn">Checkout</button>
     </section>
 
     <footer>
@@ -53,6 +53,7 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
 
 
 
