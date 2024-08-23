@@ -27,3 +27,20 @@ function CheckoutPage() {
 
 export default CheckoutPage;
 
+import React, { useContext } from 'react';
+import Checkout from '../components/Checkout';
+import { CartContext } from '../context/CartContext'; // Assuming you have a context to manage cart state
+
+function CheckoutPage() {
+  const { cartItems } = useContext(CartContext);
+  const totalAmount = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
+  return (
+    <div>
+      <Checkout cartItems={cartItems} totalAmount={totalAmount} />
+    </div>
+  );
+}
+
+export default CheckoutPage;
+
