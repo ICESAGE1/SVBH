@@ -21,7 +21,13 @@ app.use('/api/products', productsRoute);
 app.use('/api/cart', cartRoute);
 app.use('/api/orders', ordersRoute);
 
+const connectDB = require('./db');
+connectDB();
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+
+
 
